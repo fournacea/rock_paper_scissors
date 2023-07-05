@@ -55,12 +55,15 @@ print(game_images[computer_choice])
 
 
 # Handle Ties
-if user_choice == 0 and computer_choice == 0:
+if user_choice == computer_choice:
     print(tie)
-if user_choice == 1 and computer_choice == 1:
-    print(tie)
-if user_choice == 2 and computer_choice == 2:
-    print(tie)
+
+# if user_choice == 0 and computer_choice == 0:
+#     print(tie)
+# if user_choice == 1 and computer_choice == 1:
+#     print(tie)
+# if user_choice == 2 and computer_choice == 2:
+#     print(tie)
 
 #Handle User Wins
 if user_choice == 0 and computer_choice == 2:
