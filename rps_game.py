@@ -34,13 +34,25 @@ lose = "You lose!"
 
 #Write your code below this line 👇
 
-user_choice = input("Type 0 for Rock, 1 for Paper, or 2 for scissors")
+game_images = [rock, paper, scissors]
 
+user_choice = input("Type 0 for Rock, 1 for Paper, or 2 for scissors.\n")
 user_choice = int(user_choice)
 
-computer_choice = random.randint(0,2)
+#Handle Invalid Selection
+while user_choice < 0 or user_choice > 3:
+    print("Invalid Selection. Please choose a valid number.")
+    user_choice = input("Type 0 for Rock, 1 for Paper, or 2 for scissors.\n")
+    user_choice = int(user_choice)
 
-print(user_choice, computer_choice)
+print("Your choice:")
+print(game_images[user_choice])
+
+computer_choice = random.randint(0,2)
+print("Computer choice:")
+print(game_images[computer_choice])
+
+
 
 # Handle Ties
 if user_choice == 0 and computer_choice == 0:
